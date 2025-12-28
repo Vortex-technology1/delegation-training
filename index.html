@@ -1523,6 +1523,432 @@
             margin-bottom: 0;
         }
 
+        /* PPF Explanation Styles */
+        .ppf-explanation {
+            padding: 8px 0;
+        }
+
+        .pain-section, .solution-section {
+            margin-bottom: 20px;
+        }
+
+        .pain-header, .solution-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .pain-header h4, .solution-header h4 {
+            font-size: 15px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .pain-header h4 { color: #dc2626; }
+        .solution-header h4 { color: #16a34a; }
+
+        .pain-list, .solution-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .pain-item, .solution-item {
+            padding: 12px 14px;
+            border-radius: 10px;
+        }
+
+        .pain-item {
+            background: #fef2f2;
+            border-left: 3px solid #dc2626;
+        }
+
+        .solution-item {
+            background: #f0fdf4;
+            border-left: 3px solid #22c55e;
+        }
+
+        .pain-item strong, .solution-item strong {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+
+        .pain-item strong { color: #991b1b; }
+        .solution-item strong { color: #166534; }
+
+        .pain-item p, .solution-item p {
+            font-size: 12px;
+            margin: 0;
+        }
+
+        .pain-item p { color: #b91c1c; }
+        .solution-item p { color: #15803d; }
+
+        .key-insight {
+            display: flex;
+            gap: 14px;
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 1px solid #f59e0b;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+
+        .insight-icon {
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+
+        .insight-content strong {
+            display: block;
+            font-size: 14px;
+            color: #92400e;
+            margin-bottom: 6px;
+        }
+
+        .insight-content p {
+            font-size: 13px;
+            color: #78350f;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .role-switch {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+
+        .role-switch h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 14px 0;
+        }
+
+        .role-comparison {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .role-box {
+            flex: 1;
+            padding: 14px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .role-box.wrong {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+        }
+
+        .role-box.right {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+        }
+
+        .role-label {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .role-box.wrong .role-label { color: #dc2626; }
+        .role-box.right .role-label { color: #16a34a; }
+
+        .role-box p {
+            font-size: 12px;
+            color: #525252;
+            margin: 0 0 8px 0;
+        }
+
+        .role-result {
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .role-arrow {
+            font-size: 20px;
+            color: #d1d5db;
+            flex-shrink: 0;
+        }
+
+        .role-note {
+            font-size: 12px;
+            color: #6b7280;
+            margin: 0;
+            text-align: center;
+        }
+
+        .indicators-section {
+            margin-bottom: 20px;
+        }
+
+        .indicators-section h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 12px 0;
+        }
+
+        .indicators-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .indicator {
+            padding: 14px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .indicator.good {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+        }
+
+        .indicator.bad {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+        }
+
+        .indicator-emoji {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .indicator strong {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+
+        .indicator.good strong { color: #166534; }
+        .indicator.bad strong { color: #991b1b; }
+
+        .indicator p {
+            font-size: 11px;
+            color: #6b7280;
+            margin: 0 0 8px 0;
+        }
+
+        .indicator-action {
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .indicator.good .indicator-action { color: #16a34a; }
+        .indicator.bad .indicator-action { color: #dc2626; }
+
+        .examples-requirement {
+            background: #f9fafb;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+
+        .examples-requirement h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 12px 0;
+        }
+
+        .example-comparison {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .example-box {
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .example-box.wrong {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+        }
+
+        .example-box.right {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+        }
+
+        .example-label {
+            display: block;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .example-box p {
+            font-size: 12px;
+            color: #1a1a1a;
+            margin: 0 0 6px 0;
+            font-style: italic;
+        }
+
+        .example-why {
+            font-size: 11px;
+            color: #6b7280;
+        }
+
+        .example-note {
+            font-size: 12px;
+            color: #525252;
+            margin: 0;
+            text-align: center;
+        }
+
+        .exchange-types {
+            margin-bottom: 20px;
+        }
+
+        .exchange-types h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 12px 0;
+        }
+
+        .exchange-scale {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .exchange-item {
+            padding: 12px 14px;
+            border-radius: 10px;
+            border-left: 4px solid;
+        }
+
+        .exchange-item.exceed {
+            background: #f0fdf4;
+            border-color: #22c55e;
+        }
+
+        .exchange-item.equal {
+            background: #eff6ff;
+            border-color: #3b82f6;
+        }
+
+        .exchange-item.partial {
+            background: #fffbeb;
+            border-color: #f59e0b;
+        }
+
+        .exchange-item.criminal {
+            background: #fef2f2;
+            border-color: #dc2626;
+        }
+
+        .exchange-level {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .exchange-item.exceed .exchange-level { color: #16a34a; }
+        .exchange-item.equal .exchange-level { color: #2563eb; }
+        .exchange-item.partial .exchange-level { color: #d97706; }
+        .exchange-item.criminal .exchange-level { color: #dc2626; }
+
+        .exchange-item p {
+            font-size: 12px;
+            color: #525252;
+            margin: 0 0 6px 0;
+        }
+
+        .exchange-example {
+            font-size: 11px;
+            color: #6b7280;
+            font-style: italic;
+        }
+
+        .ppf-structure {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+
+        .ppf-structure h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 12px 0;
+        }
+
+        .structure-list {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .structure-list li {
+            font-size: 12px;
+            color: #525252;
+            margin-bottom: 6px;
+        }
+
+        .structure-list li strong {
+            color: #1a1a1a;
+        }
+
+        .time-investment {
+            display: flex;
+            gap: 14px;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 1px solid #93c5fd;
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .time-icon {
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+
+        .time-content strong {
+            display: block;
+            font-size: 14px;
+            color: #1e40af;
+            margin-bottom: 6px;
+        }
+
+        .time-content p {
+            font-size: 13px;
+            color: #1e3a8a;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 600px) {
+            .indicators-grid {
+                grid-template-columns: 1fr;
+            }
+            .role-comparison {
+                flex-direction: column;
+            }
+            .role-arrow {
+                transform: rotate(90deg);
+            }
+        }
+
         @media (max-width: 600px) {
             .summary-cards {
                 grid-template-columns: 1fr 1fr;
@@ -2861,7 +3287,175 @@
 
 </div>` },
             { id: 15, type: 'study', title: "Вивчіть Стаття. Секрет обміну. Чому клієнти йдуть, а бізнес прогоряє", url: "https://docs.google.com/document/d/19hUlK6UuF-UBeSiKNA6nJrJtwbg3dQiRl8KCZsZLM_w/edit?usp=sharing" },
-            { id: 16, type: 'study', title: "Вивчіть 2.2.5. Тренування Прояснення продукту та функцій посади", url: "https://docs.google.com/document/d/12m-ujCkXIEy6_jscygPp_Pv69W-8_OAEvcy7xDdEe50/edit?usp=sharing" },
+            { id: 16, type: 'study', title: "Навіщо потрібне ППФ і які проблеми воно вирішує", desc: "Прояснення продукту та функцій — це НЕ просто формальність. Це інструмент, який миттєво змінює ставлення співробітника до роботи.", expandable: true, templateContent: `<div class="ppf-explanation">
+
+<div class="pain-section">
+    <div class="pain-header">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
+        <h4>❌ БЕЗ ППФ — типові проблеми</h4>
+    </div>
+    <div class="pain-list">
+        <div class="pain-item">
+            <strong>«Я не знав, що це моя відповідальність»</strong>
+            <p>Співробітник отримав папку з документами, але не розуміє, ЩО конкретно від нього очікують</p>
+        </div>
+        <div class="pain-item">
+            <strong>«Я думав, це не терміново»</strong>
+            <p>Немає розуміння пріоритетів та наслідків невиконання</p>
+        </div>
+        <div class="pain-item">
+            <strong>«А хіба це не робота бухгалтера?»</strong>
+            <p>Плутанина в зонах відповідальності, конфлікти між відділами</p>
+        </div>
+        <div class="pain-item">
+            <strong>«Мені ніхто не казав»</strong>
+            <p>Класична відмазка, коли обов'язки не прояснені</p>
+        </div>
+        <div class="pain-item">
+            <strong>Висока плинність на випробувальному терміні</strong>
+            <p>Люди звільняються, бо «не те, що очікували» — насправді просто не зрозуміли посаду</p>
+        </div>
+    </div>
+</div>
+
+<div class="solution-section">
+    <div class="solution-header">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <h4>✅ ПІСЛЯ ППФ — що змінюється</h4>
+    </div>
+    <div class="solution-list">
+        <div class="solution-item">
+            <strong>Миттєва зміна ставлення</strong>
+            <p>Співробітник виходить з ППФ з горящими очима — він ЗРОЗУМІВ свою роль</p>
+        </div>
+        <div class="solution-item">
+            <strong>Усвідомлене виконання</strong>
+            <p>Не «роблю, бо сказали», а «роблю, бо розумію навіщо»</p>
+        </div>
+        <div class="solution-item">
+            <strong>Менше помилок</strong>
+            <p>Коли людина розуміє ЦКП — вона сама бачить, що важливо, а що ні</p>
+        </div>
+        <div class="solution-item">
+            <strong>Швидший вихід на продуктивність</strong>
+            <p>Замість місяця «розбиратися» — тиждень і людина працює</p>
+        </div>
+    </div>
+</div>
+
+<div class="key-insight">
+    <div class="insight-icon">💡</div>
+    <div class="insight-content">
+        <strong>Головний інсайт:</strong>
+        <p>Документи і папки самі по собі НЕ роблять роботу. Якщо співробітник не розуміє — він не виконає. ППФ — це процес, який ВБУДОВУЄ розуміння в голову людини.</p>
+    </div>
+</div>
+
+<div class="role-switch">
+    <h4>🎭 Головна помилка керівників</h4>
+    <div class="role-comparison">
+        <div class="role-box wrong">
+            <span class="role-label">КЕРІВНИК</span>
+            <p>Каже, що робити. Вимагає. Контролює.</p>
+            <span class="role-result">❌ Під час ППФ — НЕ ПРАЦЮЄ</span>
+        </div>
+        <div class="role-arrow">→</div>
+        <div class="role-box right">
+            <span class="role-label">ТРЕНЕР</span>
+            <p>Допомагає зрозуміти. Терпляче пояснює. Досягає осяяння.</p>
+            <span class="role-result">✅ Під час ППФ — ТІЛЬКИ ТАК</span>
+        </div>
+    </div>
+    <p class="role-note">Зніміть «капелюх керівника» і надіньте «капелюх тренера». Ваше завдання — не наказати, а досягти РОЗУМІННЯ.</p>
+</div>
+
+<div class="indicators-section">
+    <h4>📊 Як зрозуміти, що ППФ працює?</h4>
+    <div class="indicators-grid">
+        <div class="indicator good">
+            <span class="indicator-emoji">😊</span>
+            <strong>Гарні показники</strong>
+            <p>Гарний настрій, цікавість, питання, приклади з життя</p>
+            <span class="indicator-action">→ Продовжуйте</span>
+        </div>
+        <div class="indicator bad">
+            <span class="indicator-emoji">😕</span>
+            <strong>Погані показники</strong>
+            <p>Зівання, відсутній погляд, формальні відповіді</p>
+            <span class="indicator-action">→ СТОП! Поверніться назад, щось не зрозуміло</span>
+        </div>
+    </div>
+</div>
+
+<div class="examples-requirement">
+    <h4>🎯 Чому важливі ПРИКЛАДИ з життя</h4>
+    <div class="example-comparison">
+        <div class="example-box wrong">
+            <span class="example-label">❌ НЕ приклад:</span>
+            <p>«Вася погано працював — йому зменшили зарплату»</p>
+            <span class="example-why">Це загальне формулювання, не конкретика</span>
+        </div>
+        <div class="example-box right">
+            <span class="example-label">✅ Приклад:</span>
+            <p>«Коли я навчався в школі, грав у футбол і розбив вікно. Батьки платили за ремонт і не змогли купити мені нові кросівки»</p>
+            <span class="example-why">Конкретна ситуація з життя з деталями</span>
+        </div>
+    </div>
+    <p class="example-note">Домагайтеся реальних прикладів з життя співробітника — це показує справжнє розуміння</p>
+</div>
+
+<div class="exchange-types">
+    <h4>💱 4 види обміну (обов'язково прояснити)</h4>
+    <div class="exchange-scale">
+        <div class="exchange-item exceed">
+            <span class="exchange-level">З ПЕРЕВИЩЕННЯМ</span>
+            <p>Отримуєш більше, ніж очікував. Хочеться віддячити.</p>
+            <span class="exchange-example">Приклад: На заправці дали каву в подарунок</span>
+        </div>
+        <div class="exchange-item equal">
+            <span class="exchange-level">РІВНОЦІННИЙ</span>
+            <p>Отримав саме те, на що розраховував. Справедливо.</p>
+            <span class="exchange-example">Приклад: Виконав план — отримав зарплату</span>
+        </div>
+        <div class="exchange-item partial">
+            <span class="exchange-level">ЧАСТКОВИЙ</span>
+            <p>Отримав менше, ніж очікував. Відчуття «обдурили».</p>
+            <span class="exchange-example">Приклад: Купив піджак — вдома побачив пляму</span>
+        </div>
+        <div class="exchange-item criminal">
+            <span class="exchange-level">КРИМІНАЛЬНИЙ</span>
+            <p>Віддав — нічого не отримав. Чисте пограбування.</p>
+            <span class="exchange-example">Приклад: Виконав роботу — зарплату не заплатили</span>
+        </div>
+    </div>
+</div>
+
+<div class="ppf-structure">
+    <h4>📋 Структура ППФ (що прояснюємо)</h4>
+    <ol class="structure-list">
+        <li><strong>МЕТА посади</strong> — навіщо ця посада існує</li>
+        <li><strong>ЦКП</strong> — цінний кінцевий продукт (за що платять)</li>
+        <li><strong>ОБМІН</strong> — 4 види, приклади з роботи</li>
+        <li><strong>ОБОВ'ЯЗКИ</strong> — кожен окремо з прикладами</li>
+        <li><strong>Командні лінії</strong> — кому підпорядкований, ким керує</li>
+        <li><strong>Комунікаційні лінії</strong> — з ким взаємодіє горизонтально</li>
+        <li><strong>Контрагенти</strong> — зовнішні партнери</li>
+        <li><strong>Інструменти та програми</strong> — що використовує</li>
+        <li><strong>Типові помилки</strong> — чого уникати</li>
+        <li><strong>Успішні дії</strong> — що працює найкраще</li>
+        <li><strong>План на 2 тижні</strong> — конкретні завдання</li>
+    </ol>
+</div>
+
+<div class="time-investment">
+    <div class="time-icon">⏱️</div>
+    <div class="time-content">
+        <strong>Тривалість: 2-6 годин</strong>
+        <p>Так, це довго. Але це ІНВЕСТИЦІЯ, яка окупається місяцями ефективної роботи без помилок і непорозумінь.</p>
+    </div>
+</div>
+
+</div>` },
             { id: 17, type: 'task', title: "Яка різниця між керівником та тренером?" },
             { id: 18, type: 'task', title: "Чому співробітник повинен отримувати перемоги?" },
             { id: 19, type: 'task', title: "Чому співробітник має наводити багато прикладів при проясненні продукта?" },

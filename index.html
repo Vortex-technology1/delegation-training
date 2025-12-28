@@ -963,6 +963,399 @@
             padding: 8px 0;
         }
 
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .section-title h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: #e5e7eb;
+            margin: 24px 0;
+        }
+
+        /* Orgchart Visual */
+        .orgchart-visual {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .org-row {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .org-box {
+            background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%);
+            border: 2px solid #c4b5fd;
+            border-radius: 8px;
+            padding: 12px 16px;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .org-box.director {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-color: #f59e0b;
+        }
+
+        .org-box.highlighted {
+            background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+            border-color: #22c55e;
+            border-width: 3px;
+            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2);
+        }
+
+        .org-label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .org-hint {
+            display: block;
+            font-size: 10px;
+            color: #7c3aed;
+            margin-top: 4px;
+        }
+
+        .org-connector {
+            width: 2px;
+            height: 20px;
+            background: #d1d5db;
+            margin: 8px auto;
+        }
+
+        .arrow-down-big {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            margin: 24px 0;
+            color: #7c3aed;
+        }
+
+        .arrow-down-big span {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* Hierarchy Visual */
+        .hierarchy-visual {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .hierarchy-level {
+            display: flex;
+            justify-content: center;
+        }
+
+        .hierarchy-box {
+            background: white;
+            border: 2px solid;
+            border-radius: 12px;
+            padding: 16px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .level-function .hierarchy-box {
+            border-color: #7c3aed;
+            background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+        }
+
+        .level-duty .hierarchy-box {
+            border-color: #2563eb;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+        }
+
+        .level-operation .hierarchy-box {
+            border-color: #16a34a;
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        }
+
+        .level-instruction .hierarchy-box {
+            border-color: #f59e0b;
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+        }
+
+        .hierarchy-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .hierarchy-number {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: currentColor;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .level-function .hierarchy-number { background: #7c3aed; }
+        .level-duty .hierarchy-number { background: #2563eb; }
+        .level-operation .hierarchy-number { background: #16a34a; }
+        .level-instruction .hierarchy-number { background: #f59e0b; }
+
+        .hierarchy-header strong {
+            font-size: 14px;
+        }
+
+        .level-function .hierarchy-header strong { color: #7c3aed; }
+        .level-duty .hierarchy-header strong { color: #2563eb; }
+        .level-operation .hierarchy-header strong { color: #16a34a; }
+        .level-instruction .hierarchy-header strong { color: #f59e0b; }
+
+        .hierarchy-box p {
+            font-size: 13px;
+            color: #525252;
+            margin: 0 0 10px 0;
+        }
+
+        .hierarchy-example {
+            background: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #1a1a1a;
+        }
+
+        .hierarchy-example-list {
+            background: white;
+            padding: 10px 12px;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .hierarchy-example-list span {
+            font-size: 13px;
+            color: #525252;
+        }
+
+        .hierarchy-example-list.small span {
+            font-size: 12px;
+        }
+
+        .hierarchy-arrow {
+            display: flex;
+            justify-content: center;
+            padding: 4px 0;
+        }
+
+        /* Process Visual */
+        .process-explanation {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin-bottom: 16px;
+        }
+
+        .process-explanation p {
+            font-size: 13px;
+            color: #166534;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .process-visual {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            overflow-x: auto;
+        }
+
+        .process-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .process-steps {
+            display: flex;
+            align-items: stretch;
+            gap: 8px;
+            min-width: max-content;
+        }
+
+        .process-step {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 12px;
+            min-width: 130px;
+            flex: 1;
+        }
+
+        .process-step.final {
+            background: #f0fdf4;
+            border-color: #22c55e;
+        }
+
+        .step-number {
+            width: 24px;
+            height: 24px;
+            background: #22c55e;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .step-content strong {
+            display: block;
+            font-size: 12px;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+
+        .step-responsible, .step-product {
+            display: block;
+            font-size: 10px;
+            color: #6b7280;
+            line-height: 1.4;
+        }
+
+        .step-product {
+            color: #16a34a;
+            font-weight: 500;
+        }
+
+        .process-arrow {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            color: #d1d5db;
+            font-weight: 700;
+        }
+
+        .process-note {
+            display: flex;
+            gap: 12px;
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            border-radius: 10px;
+            padding: 14px 16px;
+        }
+
+        .note-icon {
+            flex-shrink: 0;
+        }
+
+        .note-content strong {
+            display: block;
+            font-size: 13px;
+            color: #92400e;
+            margin-bottom: 8px;
+        }
+
+        .note-content ul {
+            margin: 0;
+            padding-left: 16px;
+        }
+
+        .note-content li {
+            font-size: 12px;
+            color: #78350f;
+            margin-bottom: 4px;
+        }
+
+        /* Summary Cards */
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .summary-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 14px;
+            text-align: center;
+        }
+
+        .card-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 8px;
+        }
+
+        .card-icon.purple { background: #f3e8ff; color: #7c3aed; }
+        .card-icon.blue { background: #dbeafe; color: #2563eb; }
+        .card-icon.green { background: #dcfce7; color: #16a34a; }
+        .card-icon.orange { background: #fef3c7; color: #f59e0b; }
+
+        .summary-card strong {
+            display: block;
+            font-size: 12px;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .summary-card span {
+            font-size: 11px;
+            color: #6b7280;
+        }
+
+        @media (max-width: 600px) {
+            .summary-cards {
+                grid-template-columns: 1fr 1fr;
+            }
+            .process-steps {
+                flex-direction: column;
+            }
+            .process-arrow {
+                transform: rotate(90deg);
+                justify-content: center;
+            }
+            .org-row {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
         .pyramid-visual {
             display: flex;
             flex-direction: column;
@@ -1702,122 +2095,231 @@
             { id: 3, type: 'ai', title: "Регламент щодо використання оргсхеми", desc: "AI-асистент допоможе вам:\n• Вивчити практичне завдання з регламенту\n• Доопрацювати шаблон регламенту під вашу компанію\n• Уникнути поширених помилок при роботі з регламентом\n\nПройдіть діалог з асистентом — він проведе вас через весь процес створення регламенту.", url: "https://chatgpt.com/g/g-695178a73c5881918fdccafddb601baa-delegation-module-assistant-2" },
             { id: 4, type: 'ai', title: "Технологія передачі функцій", desc: "AI-асистент розбере з вами:\n• Що таке прояснення продукту та функцій посади\n• Інструкцію з прояснення продукту та функцій\n• Послідовність дій під час делегування\n\nПісля діалогу напишіть інсайти та функції, які ви як власник маєте передати.", url: "https://chatgpt.com/g/g-6951848f8ca081918f1cad8fcaeb7707-delegation-module-assistant-2" },
             { id: 5, type: 'task', title: "МОЇ ІНСАЙТИ ТА ФУНКЦІЇ ДЛЯ ПЕРЕДАЧІ", desc: "Після роботи з AI-асистентом напишіть:\n\n1. Головні інсайти з технології передачі функцій:\n\n2. Функції, які я передаю керівникам відділень:\n\nКерівник відділення 1:\nКерівник відділення 2:\nКерівник відділення 3:\nКерівник відділення 4:\nКерівник відділення 5:\nКерівник відділення 6:" },
-            { id: 6, type: 'study', title: "Що таке функція, обов'язки та операції?", desc: "Перш ніж описувати функцію, потрібно зрозуміти різницю між функцією, обов'язками та операціями. Це як піраміда — від загального до конкретного.", expandable: true, templateContent: `<div class="visual-explanation">
+            { id: 6, type: 'study', title: "Що таке функція, обов'язки та операції?", desc: "Перш ніж описувати функцію, потрібно зрозуміти структуру управління. Клікніть, щоб побачити візуальну схему.", expandable: true, templateContent: `<div class="visual-explanation">
 
-<div class="pyramid-visual">
-    <div class="pyramid-level level-1">
-        <div class="pyramid-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+<div class="section-title">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+    <h3>Оргсхема — це набір функцій (квадратів)</h3>
+</div>
+
+<div class="orgchart-visual">
+    <div class="org-row">
+        <div class="org-box director">
+            <span class="org-label">ДИРЕКТОР</span>
+            <span class="org-hint">функція</span>
         </div>
-        <div class="pyramid-content">
-            <h4>ФУНКЦІЯ</h4>
-            <p class="pyramid-subtitle">Загальний напрямок діяльності = Назва посади</p>
-            <div class="pyramid-example">
-                <span class="example-label">Приклад:</span> Менеджер з продажу
+    </div>
+    <div class="org-connector"></div>
+    <div class="org-row">
+        <div class="org-box">
+            <span class="org-label">Відділ продажів</span>
+            <span class="org-hint">функція</span>
+        </div>
+        <div class="org-box">
+            <span class="org-label">Відділ маркетингу</span>
+            <span class="org-hint">функція</span>
+        </div>
+        <div class="org-box">
+            <span class="org-label">Бухгалтерія</span>
+            <span class="org-hint">функція</span>
+        </div>
+    </div>
+    <div class="org-connector"></div>
+    <div class="org-row">
+        <div class="org-box highlighted">
+            <span class="org-label">Менеджер з продажу</span>
+            <span class="org-hint">функція = посада</span>
+        </div>
+    </div>
+</div>
+
+<div class="arrow-down-big">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    <span>Заглянемо всередину однієї функції</span>
+</div>
+
+<div class="section-title">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+    <h3>Всередині функції — ієрархія від загального до конкретного</h3>
+</div>
+
+<div class="hierarchy-visual">
+    <div class="hierarchy-level level-function">
+        <div class="hierarchy-box">
+            <div class="hierarchy-header">
+                <span class="hierarchy-number">1</span>
+                <strong>ФУНКЦІЯ</strong>
+            </div>
+            <p>Загальний напрямок = назва посади</p>
+            <div class="hierarchy-example">Менеджер з продажу</div>
+        </div>
+    </div>
+    
+    <div class="hierarchy-arrow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+    
+    <div class="hierarchy-level level-duty">
+        <div class="hierarchy-box">
+            <div class="hierarchy-header">
+                <span class="hierarchy-number">2</span>
+                <strong>ОБОВ'ЯЗКИ</strong>
+            </div>
+            <p>ЩО потрібно зробити для отримання результату</p>
+            <div class="hierarchy-example-list">
+                <span>• Залучати клієнтів</span>
+                <span>• Проводити переговори</span>
+                <span>• Укладати договори</span>
             </div>
         </div>
     </div>
     
-    <div class="pyramid-arrow">
+    <div class="hierarchy-arrow">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
     
-    <div class="pyramid-level level-2">
-        <div class="pyramid-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        </div>
-        <div class="pyramid-content">
-            <h4>ОБОВ'ЯЗКИ</h4>
-            <p class="pyramid-subtitle">ЩО потрібно зробити, щоб отримати ЦКП</p>
-            <div class="pyramid-example">
-                <span class="example-label">Приклади:</span>
-                <ul>
-                    <li>Залучати нових клієнтів</li>
-                    <li>Проводити переговори</li>
-                    <li>Укладати договори</li>
-                </ul>
+    <div class="hierarchy-level level-operation">
+        <div class="hierarchy-box">
+            <div class="hierarchy-header">
+                <span class="hierarchy-number">3</span>
+                <strong>ОПЕРАЦІЇ</strong>
+            </div>
+            <p>Конкретні кроки для виконання обов'язку</p>
+            <div class="hierarchy-example-list small">
+                <span>1. Встановити контакт</span>
+                <span>2. Виявити потреби</span>
+                <span>3. Презентувати</span>
+                <span>4. Відповісти на заперечення</span>
+                <span>5. Закрити угоду</span>
             </div>
         </div>
     </div>
     
-    <div class="pyramid-arrow">
+    <div class="hierarchy-arrow">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
     
-    <div class="pyramid-level level-3">
-        <div class="pyramid-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/></svg>
-        </div>
-        <div class="pyramid-content">
-            <h4>ОПЕРАЦІЇ</h4>
-            <p class="pyramid-subtitle">ЯК виконується кожен обов'язок (покрокова інструкція)</p>
-            <div class="pyramid-example">
-                <span class="example-label">Приклад для "Проводити переговори":</span>
-                <ol>
-                    <li>Встановити контакт з клієнтом</li>
-                    <li>Виявити потреби клієнта</li>
-                    <li>Презентувати послуги</li>
-                    <li>Відповісти на заперечення</li>
-                    <li>Домовитись про наступний крок</li>
-                </ol>
+    <div class="hierarchy-level level-instruction">
+        <div class="hierarchy-box">
+            <div class="hierarchy-header">
+                <span class="hierarchy-number">4</span>
+                <strong>ІНСТРУКЦІЯ</strong>
+            </div>
+            <p>ЯК саме виконувати кожну операцію</p>
+            <div class="hierarchy-example-list small">
+                <span>«Вітаю! Мене звуть... Дзвоню з компанії...»</span>
+                <span>«Спочатку запитайте про поточну ситуацію...»</span>
             </div>
         </div>
     </div>
 </div>
 
-<div class="concept-box">
-    <div class="concept-header">
+<div class="section-divider"></div>
+
+<div class="section-title">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <h3>Направляюча форма = Бізнес-процес</h3>
+</div>
+
+<div class="process-explanation">
+    <p>Направляюча форма — це <strong>послідовність етапів</strong>, через які проходить робота від початку до результату. По суті, це ваш бізнес-процес, розбитий на контрольовані кроки.</p>
+</div>
+
+<div class="process-visual">
+    <div class="process-title">Приклад: Процес продажу</div>
+    <div class="process-steps">
+        <div class="process-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <strong>Заявка</strong>
+                <span class="step-responsible">Хто: Маркетолог</span>
+                <span class="step-product">Продукт: Кваліфікований лід</span>
+            </div>
+        </div>
+        <div class="process-arrow">→</div>
+        <div class="process-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <strong>Перший дзвінок</strong>
+                <span class="step-responsible">Хто: Менеджер</span>
+                <span class="step-product">Продукт: Призначена зустріч</span>
+            </div>
+        </div>
+        <div class="process-arrow">→</div>
+        <div class="process-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <strong>Презентація</strong>
+                <span class="step-responsible">Хто: Менеджер</span>
+                <span class="step-product">Продукт: КП надіслано</span>
+            </div>
+        </div>
+        <div class="process-arrow">→</div>
+        <div class="process-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+                <strong>Договір</strong>
+                <span class="step-responsible">Хто: Менеджер</span>
+                <span class="step-product">Продукт: Підписаний договір</span>
+            </div>
+        </div>
+        <div class="process-arrow">→</div>
+        <div class="process-step final">
+            <div class="step-number">5</div>
+            <div class="step-content">
+                <strong>Оплата</strong>
+                <span class="step-responsible">Хто: Бухгалтер</span>
+                <span class="step-product">Продукт: Гроші на рахунку</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="process-note">
+    <div class="note-icon">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-        <strong>ЦКП — Цінний Кінцевий Продукт</strong>
     </div>
-    <p>Це результат роботи, за який ви платите як власник бізнесу. Наприклад, для менеджера з продажу ЦКП — це підписані договори та оплачені рахунки, а не "кількість дзвінків".</p>
-</div>
-
-<div class="metrics-comparison">
-    <h4>Правильні vs Неправильні метрики</h4>
-    <div class="metrics-grid">
-        <div class="metric-item wrong">
-            <div class="metric-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
-            </div>
-            <span>Кількість дзвінків</span>
-        </div>
-        <div class="metric-item right">
-            <div class="metric-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-            <span>Кількість угод</span>
-        </div>
-        <div class="metric-item wrong">
-            <div class="metric-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
-            </div>
-            <span>Кількість заявок</span>
-        </div>
-        <div class="metric-item right">
-            <div class="metric-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-            <span>Конверсія в клієнтів</span>
-        </div>
+    <div class="note-content">
+        <strong>Кожен етап має:</strong>
+        <ul>
+            <li><strong>Відповідальний</strong> — хто робить</li>
+            <li><strong>Дата/дедлайн</strong> — коли має бути готово</li>
+            <li><strong>Контрольне питання</strong> — як перевірити</li>
+            <li><strong>Продукт етапу</strong> — що отримуємо в результаті</li>
+        </ul>
     </div>
 </div>
 
-<div class="simple-rule">
-    <h4>Просте правило для запам'ятовування:</h4>
-    <div class="rule-cards">
-        <div class="rule-card">
-            <strong>ФУНКЦІЯ</strong>
-            <span>= Хто ти? (посада)</span>
+<div class="section-divider"></div>
+
+<div class="summary-cards">
+    <div class="summary-card">
+        <div class="card-icon purple">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
         </div>
-        <div class="rule-card">
-            <strong>ОБОВ'ЯЗКИ</strong>
-            <span>= Що робиш?</span>
+        <strong>Оргсхема</strong>
+        <span>Квадрати = функції</span>
+    </div>
+    <div class="summary-card">
+        <div class="card-icon blue">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/></svg>
         </div>
-        <div class="rule-card">
-            <strong>ОПЕРАЦІЇ</strong>
-            <span>= Як робиш?</span>
+        <strong>Опис посади</strong>
+        <span>Обов'язки (ЩО)</span>
+    </div>
+    <div class="summary-card">
+        <div class="card-icon green">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
         </div>
+        <strong>Інструкції</strong>
+        <span>Операції (ЯК)</span>
+    </div>
+    <div class="summary-card">
+        <div class="card-icon orange">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <strong>Направляюча форма</strong>
+        <span>Бізнес-процес</span>
     </div>
 </div>
 

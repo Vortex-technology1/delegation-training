@@ -2373,6 +2373,205 @@
             margin: 0;
         }
 
+        /* Article Content Styles */
+        .article-content {
+            padding: 8px 0;
+        }
+
+        .article-intro {
+            font-size: 14px;
+            color: #525252;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .article-intro p {
+            margin: 0;
+        }
+
+        .article-key-insight {
+            display: flex;
+            gap: 14px;
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border: 1px solid #fcd34d;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+
+        .article-key-insight .insight-text strong {
+            display: block;
+            font-size: 14px;
+            color: #92400e;
+            margin-bottom: 6px;
+        }
+
+        .article-key-insight .insight-text p {
+            font-size: 13px;
+            color: #78350f;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .article-section {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .article-section:last-of-type {
+            border-bottom: none;
+        }
+
+        .article-section .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .article-section .section-header h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0;
+        }
+
+        .article-section p {
+            font-size: 13px;
+            color: #525252;
+            line-height: 1.6;
+            margin: 0 0 10px 0;
+        }
+
+        .article-example {
+            background: #f0fdf4;
+            border-left: 3px solid #22c55e;
+            padding: 12px 14px;
+            border-radius: 0 8px 8px 0;
+            margin: 12px 0;
+        }
+
+        .article-example strong {
+            display: block;
+            font-size: 12px;
+            color: #166534;
+            margin-bottom: 4px;
+        }
+
+        .article-metaphor {
+            font-style: italic;
+            color: #6b7280 !important;
+        }
+
+        .article-solution {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 10px;
+            padding: 14px;
+            margin: 12px 0;
+        }
+
+        .article-solution strong {
+            display: block;
+            font-size: 13px;
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+
+        .article-solution ol {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .article-solution li {
+            font-size: 12px;
+            color: #1e3a8a;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .article-note {
+            font-weight: 500;
+            color: #166534 !important;
+        }
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 12px 0;
+        }
+
+        .two-columns .column {
+            background: #f9fafb;
+            border-radius: 10px;
+            padding: 14px;
+        }
+
+        .two-columns .column strong {
+            display: block;
+            font-size: 12px;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+
+        .two-columns .column p {
+            font-size: 12px;
+            margin: 0;
+        }
+
+        .article-tip {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 10px;
+            padding: 12px 14px;
+            margin: 12px 0;
+        }
+
+        .article-tip p {
+            font-size: 12px;
+            color: #166534;
+            margin: 0;
+        }
+
+        .article-quote {
+            background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+            border-left: 4px solid #7c3aed;
+            padding: 14px 16px;
+            border-radius: 0 10px 10px 0;
+            margin: 12px 0;
+        }
+
+        .article-quote p {
+            font-size: 13px;
+            color: #5b21b6;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .article-author {
+            text-align: right;
+            padding-top: 12px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .article-author p {
+            font-size: 13px;
+            font-weight: 600;
+            color: #6b7280;
+            margin: 0;
+        }
+
+        @media (max-width: 600px) {
+            .two-columns {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 600px) {
             .ppf-flow {
                 flex-direction: column;
@@ -4071,7 +4270,104 @@
             // КРОК 3: Передача функцій відповідальним
             { id: 23, type: 'task', title: "ПРОВЕДІТЬ ПЕРШЕ ППФ ДЛЯ КОЖНОГО КЕРІВНИКА", desc: "Створіть розклад у Google календарі, за яким проводитимете прояснення продукту та функцій майбутнім керівникам. Записуйте всі процедури." },
             { id: 24, type: 'task', title: "Плани на два тижні", desc: "Складіть план на два тижні для функції, яку делегуєте. Опишіть конкретні кроки, завдання та очікувані результати для кожного майбутнього керівника." },
-            { id: 25, type: 'study', title: "Вивчіть Як діяти на новій посаді.docx", url: "https://docs.google.com/document/d/1MG3vJwdYGvxZKPB4EIfUSYgGw1NsMztv/edit?usp=sharing" },
+            { id: 25, type: 'study', title: "Як розпочати роботу на новій посаді", desc: "Стаття для співробітника: типові помилки новачків та як їх уникнути. Відкрийте, щоб прочитати.", expandable: true, templateContent: `<div class="article-content">
+
+<div class="article-intro">
+    <p>Більшість людей, починаючи виконувати роботу на новій посаді, роблять одні й ті самі помилки. Ця стаття про те, як уникнути найпоширеніших з них, щоб отримувати більше результатів та задоволення від роботи.</p>
+</div>
+
+<div class="article-key-insight">
+    <div class="insight-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+    </div>
+    <div class="insight-text">
+        <strong>Головне усвідомлення:</strong>
+        <p>Будь-яка нова посада — це нова діяльність, у якій НЕМАЄ досвіду та впевненості. Більшість людей не здатні отримати більших результатів тільки тому, що бояться починати з нуля.</p>
+    </div>
+</div>
+
+<div class="article-section">
+    <div class="section-header">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <h4>1. ПОСТУПОВІСТЬ</h4>
+    </div>
+    <p>Будь-яку нову посаду необхідно освоювати <strong>крок за кроком</strong>. Спроба зробити все одразу призводить до замішання та розчарувань.</p>
+    <div class="article-example">
+        <strong>Приклад:</strong> Якщо ви стали керівником відділу — спочатку навчіться проводити щоденні наради. Досягніть, щоб це виходило. Після цього опануйте наступний інструмент.
+    </div>
+    <p class="article-metaphor">Це як кататися на велосипеді — спочатку ви просто вчитесь зберігати рівновагу по прямій. Тільки потім зможете маневрувати.</p>
+</div>
+
+<div class="article-section">
+    <div class="section-header">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
+        <h4>2. ВАС ІГНОРУЮТЬ</h4>
+    </div>
+    <p>Ви вже три дні на новій посаді, але таке відчуття, що ніхто цього не помічає! <strong>Це абсолютно нормально.</strong></p>
+    <p>В компанії вже є уклад роботи. Хтось усвідомлено чи несвідомо робить роботу тієї посади, на яку ви прийшли. У співробітників є звички.</p>
+    
+    <div class="article-solution">
+        <strong>Рішення — 3 кроки:</strong>
+        <ol>
+            <li><strong>Складіть список</strong> усіх людей, з якими вам потрібно буде співпрацювати</li>
+            <li><strong>Поспілкуйтеся з кожним:</strong> донесіть, що тепер ВИ виконуєте цю роботу і з певних питань звертатися до ВАС</li>
+            <li><strong>З'ясуйте очікування:</strong> що ця людина чекає від вас на цій посаді — і надайте їй це</li>
+        </ol>
+    </div>
+    <p class="article-note">Немає кращого способу отримати визнання, ніж виконати те, що очікується.</p>
+</div>
+
+<div class="article-section">
+    <div class="section-header">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+        <h4>3. ВАС ОБХОДЯТЬ</h4>
+    </div>
+    <p>Хтось віддає вашим підлеглим розпорядження і заважає виконувати вашу роботу. Дві причини:</p>
+    
+    <div class="two-columns">
+        <div class="column">
+            <strong>Причина 1: Звичка</strong>
+            <p>Вас обходять просто за звичкою. Рішення: нагадайте, що це тепер ваші обов'язки, з'ясуйте деталі і заберіть цю роботу.</p>
+        </div>
+        <div class="column">
+            <strong>Причина 2: Ви не впоралися</strong>
+            <p>Виникла проблема, яку ви не вирішили. Рішення: з'ясуйте, як і чому діяв керівник, і навчіться долати такі ситуації.</p>
+        </div>
+    </div>
+</div>
+
+<div class="article-section">
+    <div class="section-header">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="m4.93 19.07 2.83-2.83"/><path d="m16.24 7.76 2.83-2.83"/></svg>
+        <h4>4. ПЕРЕВАНТАЖЕННЯ</h4>
+    </div>
+    <p>Намагатися виконати нездійсненне — спосіб перетворити роботу на пекло.</p>
+    <p>Якщо ви ще не засвоїли нову роботу, вам навіть складно оцінити, скільки часу потрібно на завдання.</p>
+    
+    <div class="article-tip">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <p><strong>Порада:</strong> Якщо часу на все недостатньо — не намагайтеся «всунути» все. Виберіть найважливіші завдання. Якщо вперше робите щось — виділіть час із запасом.</p>
+    </div>
+</div>
+
+<div class="article-section">
+    <div class="section-header">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <h4>5. КОМПЕТЕНТНІСТЬ</h4>
+    </div>
+    <p>Коли не знаєте, як діяти — <strong>зверніться до керівника</strong> або людини, яка раніше успішно виконувала цю роботу.</p>
+    <p>Якщо ви тільки почали освоювати посаду, ніхто не очікує, що ви впораєтесь з будь-якою проблемою самостійно.</p>
+    
+    <div class="article-quote">
+        <p>«В організації людей цінують не за здатність робити розумний вигляд, а за здатність давати результати у роботі.»</p>
+    </div>
+</div>
+
+<div class="article-author">
+    <p>Олександр Талько</p>
+</div>
+
+</div>` },
             { id: 26, type: 'study', title: "Вивчіть ІНСТРУКЦІЯ Друга співбесіда з майбутніми керівниками.docx", url: "https://docs.google.com/document/d/1z8WK7G1X6BlVP4_DOqXg-SyctzLklkRF/edit?usp=sharing" },
             { id: 27, type: 'study', title: "РЕКОМЕНДАЦІЇ проведення СПІВБЕСІДИ", desc: "1. Не відволікайтеся на питання, що не належать до теми\n2. Рухайтеся за планом співбесіди\n3. Зберігайте гарний настрій та прийнятний емоційний тон" },
             { id: 28, type: 'study', title: "Поширені помилки при ППФ з керівниками", desc: "1. Резидент не проводить ППФ, якщо всі керівники давно працюють\n2. Резидент не промовляє терміни (ЦКП, ціль, командні лінії)\n3. ППФ перетворюється на розбір польотів\n4. Не давати зворотний зв'язок\n5. Не передати посадову папку\n6. Забути про план на 2 місяці\n7. Не отримати відповідь на запитання про сумніви\n8. Не обговорити вступ на посаду\n9. Не дати підтвердження чому він впорається\n10. Не отримати підтвердження готовності" },

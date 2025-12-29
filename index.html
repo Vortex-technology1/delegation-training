@@ -901,6 +901,28 @@
             color: var(--primary);
         }
 
+        .material-type.info {
+            background: #fef3c7;
+            color: #f59e0b;
+        }
+
+        /* Special styling for preparation info block */
+        .material-item[data-index="0"] {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border: 2px solid #fde68a !important;
+            border-radius: 14px;
+            margin-bottom: 8px;
+        }
+
+        .material-item[data-index="0"] .material-number {
+            background: #f59e0b;
+            color: white;
+        }
+
+        .material-item[data-index="0"] .material-desc {
+            color: #92400e;
+        }
+
         .material-title {
             font-size: 14px;
             font-weight: 600;
@@ -4233,16 +4255,6 @@
                     <h3>Матеріали курсу</h3>
                 </div>
                 
-                <div class="course-phase-info">
-                    <div class="phase-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                    </div>
-                    <div class="phase-content">
-                        <div class="phase-title">Уроки 1-31: ТІЛЬКИ ПІДГОТОВКА</div>
-                        <div class="phase-desc">Вивчаємо теорію та готуємо документи. Зі співробітниками поки нічого не проводимо — це буде пізніше. Зараз ваше завдання — підготуватися.</div>
-                    </div>
-                </div>
-                
                 <div class="materials-list" id="materials-list"></div>
             </div>
 
@@ -6226,20 +6238,207 @@
 
 </div>` },
             { id: 30, type: 'task', title: "Перевірка регламенту КВ1", desc: "Якщо ви давали комусь завдання написати регламент — перевірте його. Не залишайте без перевірки." },
-            { id: 31, type: 'study', title: "Вивчіть 2.1.4. ПРАКТИЧНЕ ЗАВДАННЯ. Підготуватися до навчального заняття", desc: "Важливо не говорити «ми робимо так, бо сказав Талько». Кажіть: «я вважаю, що це оптимально».", url: "https://docs.google.com/document/d/1ctqasPAvy_f_JjHsqrd057V0DDIE0Cu4BkJGVK5ZPMQ/edit?usp=sharing" },
-            { id: 32, type: 'task', title: "Тези та презентація для заняття", desc: "Заповніть тези до своїх прикладів. Підготуйте слайди для заняття." },
-            { id: 33, type: 'task', title: "Посилання на презентацію та тезиси" },
-            { id: 34, type: 'study', title: "Вивчіть 2.2.9. ЗАВДАННЯ. Підготувати наказ про заповнення функцій", url: "https://docs.google.com/document/d/1yvx_EG3KJw3qGbv_jAYOclHNRAwB40B5/edit?usp=sharing" },
-            { id: 35, type: 'task', title: "НАКАЗ ПРО РОЗПОДІЛ ФУНКЦІЙ", desc: "Створіть свій наказ про розподіл функцій між співробітниками та опублікуйте його перед загальним зборами персоналу.\n\nЗавантажте свій варіант наказу.\nЯкі ідеї прийшли вам у процесі виконання цього завдання?" },
-            { id: 36, type: 'task', title: "Додатки до наказу" },
+            { id: 31, type: 'study', title: "ІНСТРУКЦІЯ: Як підготуватися до заняття з оргсхеми для співробітників", desc: "🎯 ПЕРШИЙ ЗАХІД ЗІ СПІВРОБІТНИКАМИ! Тут ви вперше проводите щось для команди. Відкрийте для повної інструкції та чек-листа.", expandable: true, templateContent: `<div class="instruction-content">
+
+<div class="instruction-situation" style="background: #f0fdf4; border-color: #22c55e;">
+    <div class="situation-header">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <h4 style="color: #166534;">ВАЖЛИВИЙ МОМЕНТ</h4>
+    </div>
+    <p style="color: #166534;">Це ваш <strong>перший захід зі співробітниками</strong> на цьому курсі! До цього ви тільки готувалися — тепер час діяти.</p>
+    <p style="color: #166534; margin-top: 8px;"><strong>Мета заняття:</strong> Дати співробітникам розуміння, навіщо потрібна оргсхема та як її використовувати.</p>
+</div>
+
+<div class="warning-block" style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 12px; padding: 16px; margin: 16px 0;">
+    <div class="warning-header" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+        <h4 style="color: #dc2626; margin: 0; font-size: 14px;">ГОЛОВНА ПОМИЛКА — НЕ РОБІТЬ ТАК!</h4>
+    </div>
+    <p style="color: #991b1b; font-size: 13px; margin: 0;">Ніколи не кажіть: <em>"Ми це робимо, бо так сказав Талько / Друкер / консультант"</em></p>
+    <p style="color: #166534; font-size: 13px; margin: 10px 0 0 0; padding: 10px; background: #f0fdf4; border-radius: 8px;"><strong>✓ Правильно:</strong> "Я вважаю, що це оптимально для нашої компанії. Я знайшов ці ідеї, вивчив їх і вирішив, що це саме те, що нам потрібно."</p>
+</div>
+
+<div class="instruction-section">
+    <div class="section-header blue">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        <h4>ЗАГАЛЬНІ ДАНІ</h4>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+        <div style="background: #eff6ff; padding: 12px; border-radius: 8px; text-align: center;">
+            <div style="font-size: 20px; font-weight: 700; color: #2563eb;">1:45</div>
+            <div style="font-size: 11px; color: #1e40af;">Тривалість</div>
+        </div>
+        <div style="background: #f0fdf4; padding: 12px; border-radius: 8px; text-align: center;">
+            <div style="font-size: 20px; font-weight: 700; color: #16a34a;">100%</div>
+            <div style="font-size: 11px; color: #166534;">Усі співробітники</div>
+        </div>
+    </div>
+    <p style="font-size: 12px; color: #6b7280; margin-top: 10px;">Якщо в компанії понад 100 осіб або співробітники працюють позмінно — проведіть два заняття.</p>
+</div>
+
+<div class="instruction-section">
+    <div class="section-header orange">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/></svg>
+        <h4>ДОКУМЕНТИ З ПОПЕРЕДНІХ ЗАВДАНЬ</h4>
+    </div>
+    <p style="font-size: 12px; color: #92400e; margin-bottom: 12px;">Ці документи ви вже підготували раніше — зберіть їх:</p>
+    <div class="materials-list">
+        <div class="session-material-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div>
+                <strong style="color: #166534;">Регламент щодо використання оргсхеми</strong>
+                <span class="material-note">— підготували в уроці 1.3 з AI-асистентом</span>
+            </div>
+        </div>
+        <div class="session-material-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div>
+                <strong style="color: #166534;">Оргсхема вашої компанії</strong>
+                <span class="material-note">— розроблена на попередніх етапах</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="instruction-section">
+    <div class="section-header green">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <h4>ЧЕК-ЛИСТ ПІДГОТОВКИ (за тиждень до заняття)</h4>
+    </div>
+    <div class="checklist-items">
+        <div class="checklist-item">
+            <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+            <p><strong>Повідомте співробітників</strong> через керівників про місце та час заняття</p>
+        </div>
+        <div class="checklist-item">
+            <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+            <p><strong>Розмістіть оголошення</strong> на дошці оголошень / у чаті</p>
+        </div>
+        <div class="checklist-item">
+            <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+            <p><strong>Роздрукуйте оргсхему</strong> на великому аркуші (А0/А1) для кожного кабінету</p>
+        </div>
+        <div class="checklist-item">
+            <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+            <p><strong>Підготуйте тези</strong> — доповніть шаблон своїми прикладами (урок 32)</p>
+        </div>
+        <div class="checklist-item">
+            <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+            <p><strong>Підготуйте презентацію</strong> — доповніть слайди своїми ідеями (урок 32)</p>
+        </div>
+        <div class="checklist-item">
+            <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+            <p><strong>Проведіть тренування</strong> — переконайтесь, що можете легко пояснити всі ідеї</p>
+        </div>
+    </div>
+</div>
+
+<div class="instruction-section">
+    <div class="section-header blue">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <h4>РОЗДАТКОВІ МАТЕРІАЛИ ДЛЯ УЧАСНИКІВ</h4>
+    </div>
+    <p style="font-size: 12px; color: #525252; margin-bottom: 12px;">Забезпечте кожного учасника:</p>
+    <div class="checklist-items">
+        <div class="checklist-item">
+            <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+            <p><strong>Регламент</strong> щодо використання оргсхеми</p>
+        </div>
+        <div class="checklist-item">
+            <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+            <p><strong>Перевірка за регламентом</strong> — питання для перевірки розуміння</p>
+        </div>
+        <div class="checklist-item">
+            <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+            <p><strong>Опитування після заняття</strong> — для зворотного зв'язку</p>
+        </div>
+        <div class="checklist-item">
+            <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+            <p><strong>Бланк відгуку</strong> — наприкінці заняття</p>
+        </div>
+        <div class="checklist-item">
+            <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+            <p><strong>Ручка + папір</strong> або планшетка для письмових завдань</p>
+        </div>
+    </div>
+</div>
+
+<div class="instruction-section">
+    <div class="section-header purple">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        <h4>ПОРАДИ ДЛЯ ПРОВЕДЕННЯ</h4>
+    </div>
+    <div class="recommendations">
+        <div class="recommendation-item">
+            <span class="rec-number">1</span>
+            <div class="rec-content">
+                <p><strong>Будьте собою</strong> — не намагайтеся здаватися кращим чи енергійнішим, ніж є</p>
+            </div>
+        </div>
+        <div class="recommendation-item">
+            <span class="rec-number">2</span>
+            <div class="rec-content">
+                <p><strong>Працюйте над прикладами</strong> — вони роблять виступ зрозумілим і живим</p>
+            </div>
+        </div>
+        <div class="recommendation-item">
+            <span class="rec-number">3</span>
+            <div class="rec-content">
+                <p><strong>Скажіть про опитування на початку</strong> — це збільшує увагу до презентації</p>
+            </div>
+        </div>
+        <div class="recommendation-item">
+            <span class="rec-number">4</span>
+            <div class="rec-content">
+                <p><strong>Запишіть заняття</strong> — використовуйте для навчання нових співробітників</p>
+            </div>
+        </div>
+        <div class="recommendation-item">
+            <span class="rec-number">5</span>
+            <div class="rec-content">
+                <p><strong>Не драматизуйте</strong> — це просто інструмент, як новий комп'ютер чи офіс</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="instruction-section">
+    <div class="section-header green">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <h4>ПІСЛЯ ЗАНЯТТЯ</h4>
+    </div>
+    <div class="checklist-items">
+        <div class="checklist-item">
+            <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+            <p><strong>Повісьте оргсхему</strong> у кожен кабінет для ознайомлення</p>
+        </div>
+        <div class="checklist-item">
+            <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+            <p><strong>Призначте відповідального</strong> за оновлення оргсхеми</p>
+        </div>
+        <div class="checklist-item">
+            <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+            <p><strong>Зберіть відгуки</strong> та проаналізуйте результати опитування</p>
+        </div>
+    </div>
+</div>
+
+<div class="instruction-conclusion">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <div>
+        <strong>ОЧІКУВАНИЙ РЕЗУЛЬТАТ</strong>
+        <p>Співробітники, які розуміють навіщо потрібна оргсхема і хочуть познайомитися з нею ближче. Коли ви створюєте це розуміння — співробітники починають працювати як команда, а ви зміцнюєте свою владу та авторитет.</p>
+    </div>
+</div>
+
+</div>` },
             
             // КРОК 4: Загальна презентація
-            { id: 37, type: 'study', title: "Вивчіть 2.2.10. ПРАКТИЧНЕ ЗАВДАННЯ. Проведіть загальні збори персоналу", url: "https://docs.google.com/document/d/1RRPFHx8qQbjc_zWMPDM-_KDaCniNEJ9n/edit?usp=sharing" },
-            { id: 38, type: 'study', title: "Вивчіть ІНСТРУКЦІЯ ЯК ПРОВОДИТИ ЗАГАЛЬНІ ЗБОРИ З ОРГСХЕМИ", url: "https://docs.google.com/document/d/1J7IqVY1n0xMRXnV1t66bKP51GWRrI3PEWXgwVaP_JmE/edit?usp=sharing" },
-            { id: 39, type: 'task', title: "Тренування загальних зборів перед дзеркалом" },
-            { id: 40, type: 'task', title: "ПРОВЕДІТЬ ЗАГАЛЬНІ ЗБОРИ ПЕРСОНАЛУ", desc: "Проведіть його весело та невимушено, запально та динамічно.\n\nЗробіть запис зборів та прикріпіть посилання.\nНапишіть свої висновки.\n\nЗверніть увагу, що керівники відділень в кінці мають вийти і коротко розповісти про своє відділення." },
-            { id: 41, type: 'study', title: "Вивчіть 2.2.11. Введення функції відповідального за підтримку оргсхеми", url: "https://docs.google.com/document/d/1dgVcuVuTeXLhtjq2vPgyFQ1Ywt_KFsonjZ0ZeLfv0cM/edit?usp=sharing" },
-            { id: 42, type: 'task', title: "ВІДПОВІДАЛЬНИЙ ЗА ОРГСХЕМУ", desc: "Хто зараз у вашій компанії відповідатиме за організуючу схему?\nЩо нового ви собі дізналися?\nЯкі висновки ви зробили?" }
+            { id: 32, type: 'study', title: "Вивчіть ІНСТРУКЦІЯ ЯК ПРОВОДИТИ ЗАГАЛЬНІ ЗБОРИ З ОРГСХЕМИ", url: "https://docs.google.com/document/d/1J7IqVY1n0xMRXnV1t66bKP51GWRrI3PEWXgwVaP_JmE/edit?usp=sharing" },
+            { id: 33, type: 'task', title: "Тренування загальних зборів перед дзеркалом" },
+            { id: 34, type: 'task', title: "ПРОВЕДІТЬ ЗАГАЛЬНІ ЗБОРИ ПЕРСОНАЛУ", desc: "Проведіть його весело та невимушено, запально та динамічно.\n\nЗробіть запис зборів та прикріпіть посилання.\nНапишіть свої висновки.\n\nЗверніть увагу, що керівники відділень в кінці мають вийти і коротко розповісти про своє відділення." },
+            { id: 35, type: 'study', title: "Вивчіть 2.2.11. Введення функції відповідального за підтримку оргсхеми", url: "https://docs.google.com/document/d/1dgVcuVuTeXLhtjq2vPgyFQ1Ywt_KFsonjZ0ZeLfv0cM/edit?usp=sharing" },
+            { id: 36, type: 'task', title: "ВІДПОВІДАЛЬНИЙ ЗА ОРГСХЕМУ", desc: "Хто зараз у вашій компанії відповідатиме за організуючу схему?\nЩо нового ви собі дізналися?\nЯкі висновки ви зробили?" }
         ];
 
         // Type icons
@@ -6247,7 +6446,8 @@
             study: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`,
             task: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`,
             template: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><path d="M12 18v-6"/><path d="m9 15 3 3 3-3"/></svg>`,
-            ai: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>`
+            ai: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>`,
+            info: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>`
         };
 
         function showMainApp() {

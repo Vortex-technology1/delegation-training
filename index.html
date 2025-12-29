@@ -716,6 +716,46 @@
             max-height: none;
         }
 
+        .course-phase-info {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border: 2px solid #fde68a;
+            border-radius: 14px;
+            padding: 16px 18px;
+            margin-bottom: 20px;
+        }
+
+        .phase-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.15);
+        }
+
+        .phase-content {
+            flex: 1;
+        }
+
+        .phase-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #92400e;
+            margin-bottom: 4px;
+        }
+
+        .phase-desc {
+            font-size: 13px;
+            color: #78350f;
+            line-height: 1.5;
+        }
+
         .material-item {
             border-bottom: 1px solid var(--border-gray);
             transition: background 0.2s;
@@ -4192,6 +4232,17 @@
                     </div>
                     <h3>Матеріали курсу</h3>
                 </div>
+                
+                <div class="course-phase-info">
+                    <div class="phase-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                    </div>
+                    <div class="phase-content">
+                        <div class="phase-title">Уроки 1-31: ТІЛЬКИ ПІДГОТОВКА</div>
+                        <div class="phase-desc">Вивчаємо теорію та готуємо документи. Зі співробітниками поки нічого не проводимо — це буде пізніше. Зараз ваше завдання — підготуватися.</div>
+                    </div>
+                </div>
+                
                 <div class="materials-list" id="materials-list"></div>
             </div>
 
@@ -4234,6 +4285,9 @@
 
         // Materials data (42 items - updated structure)
         const materials = [
+            // БАНЕР: Етап підготовки
+            { id: 0, type: 'info', title: "⚡ ЕТАП ПІДГОТОВКИ (уроки 1-31)", desc: "Зараз ви тільки ГОТУЄТЕСЬ: вивчаєте матеріали, створюєте документи, тренуєтесь. Поки що НЕ проводьте нічого зі співробітниками — я напишу, коли прийде час.", isPreparation: true },
+            
             // КРОК 1: Підготовка матеріалів (уроки 1-3 замінено на AI-асистента)
             { id: 1, type: 'ai', title: "КРОК 1: Підготовка матеріалів з AI-асистентом", desc: "AI-асистент проведе вас через підготовку тезисів, презентації, перевірки та опитування. Це матеріали для загальної презентації оргсхеми команді, яку проведете В КІНЦІ курсу.\n\nПройдіть діалог з асистентом — він пояснить структуру курсу та допоможе підготувати всі необхідні матеріали.", url: "https://chatgpt.com/g/g-6951729e72c881919e55005539b9277a-delegation-module-assistant-1" },
             
@@ -5821,7 +5875,7 @@
 </div>` },
             { id: 27, type: 'study', title: "РЕКОМЕНДАЦІЇ проведення СПІВБЕСІДИ", desc: "1. Не відволікайтеся на питання, що не належать до теми\n2. Рухайтеся за планом співбесіди\n3. Зберігайте гарний настрій та прийнятний емоційний тон" },
             { id: 28, type: 'study', title: "Поширені помилки при ППФ з керівниками", desc: "1. Резидент не проводить ППФ, якщо всі керівники давно працюють\n2. Резидент не промовляє терміни (ЦКП, ціль, командні лінії)\n3. ППФ перетворюється на розбір польотів\n4. Не давати зворотний зв'язок\n5. Не передати посадову папку\n6. Забути про план на 2 місяці\n7. Не отримати відповідь на запитання про сумніви\n8. Не обговорити вступ на посаду\n9. Не дати підтвердження чому він впорається\n10. Не отримати підтвердження готовності" },
-            { id: 29, type: 'study', title: "ІНСТРУКЦІЯ: Підготовча сесія для передачі функцій", desc: "Як організувати та провести сесію підготовки до передачі функцій. Тривалість ~8 годин. Відкрийте для повної інструкції.", expandable: true, templateContent: `<div class="instruction-content">
+            { id: 29, type: 'study', title: "ІНСТРУКЦІЯ: Підготовча сесія для передачі функцій", desc: "Як організувати сесію підготовки до передачі функцій. Тривалість ~8 годин.", expandable: true, templateContent: `<div class="instruction-content">
 
 <div class="article-download">
     <a href="#" onclick="downloadSessionInstructionPDF(); return false;" class="download-btn">
@@ -6171,8 +6225,8 @@
 </div>
 
 </div>` },
-            { id: 30, type: 'task', title: "Перевірка регламенту КВ1", desc: "Якщо ви давали вашому КВ 1 завдання з доопрацювання регламенту з оргсхеми, перевірте їх згідно з ІНСТРУКЦІЯ Як перевірити регламент щодо використання оргсхеми.docx" },
-            { id: 31, type: 'study', title: "Вивчіть 2.1.4. ПРАКТИЧНЕ ЗАВДАННЯ. Підготуватися до навчального заняття", desc: "Важливо не говорити, що ми робимо, бо так сказав Талько. Ви повинні сказати, що ми це робимо так, тому що я вважаю, що це оптимально.", url: "https://docs.google.com/document/d/1ctqasPAvy_f_JjHsqrd057V0DDIE0Cu4BkJGVK5ZPMQ/edit?usp=sharing" },
+            { id: 30, type: 'task', title: "Перевірка регламенту КВ1", desc: "Якщо ви давали комусь завдання написати регламент — перевірте його. Не залишайте без перевірки." },
+            { id: 31, type: 'study', title: "Вивчіть 2.1.4. ПРАКТИЧНЕ ЗАВДАННЯ. Підготуватися до навчального заняття", desc: "Важливо не говорити «ми робимо так, бо сказав Талько». Кажіть: «я вважаю, що це оптимально».", url: "https://docs.google.com/document/d/1ctqasPAvy_f_JjHsqrd057V0DDIE0Cu4BkJGVK5ZPMQ/edit?usp=sharing" },
             { id: 32, type: 'task', title: "Тези та презентація для заняття", desc: "Заповніть тези до своїх прикладів. Підготуйте слайди для заняття." },
             { id: 33, type: 'task', title: "Посилання на презентацію та тезиси" },
             { id: 34, type: 'study', title: "Вивчіть 2.2.9. ЗАВДАННЯ. Підготувати наказ про заповнення функцій", url: "https://docs.google.com/document/d/1yvx_EG3KJw3qGbv_jAYOclHNRAwB40B5/edit?usp=sharing" },

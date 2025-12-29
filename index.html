@@ -3308,6 +3308,51 @@
             margin-bottom: 4px;
         }
 
+        .materials-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .material-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px 12px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #d1fae5;
+        }
+
+        .material-item svg {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .material-link {
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 13px;
+            text-decoration: none;
+        }
+
+        .material-link:hover {
+            text-decoration: underline;
+        }
+
+        .material-note {
+            display: block;
+            font-size: 11px;
+            color: #6b7280;
+            margin-top: 2px;
+        }
+
+        .material-note a {
+            color: #22c55e;
+            font-weight: 500;
+        }
+
         .section-header.purple {
             border-bottom-color: #7c3aed;
         }
@@ -5778,6 +5823,13 @@
             { id: 28, type: 'study', title: "Поширені помилки при ППФ з керівниками", desc: "1. Резидент не проводить ППФ, якщо всі керівники давно працюють\n2. Резидент не промовляє терміни (ЦКП, ціль, командні лінії)\n3. ППФ перетворюється на розбір польотів\n4. Не давати зворотний зв'язок\n5. Не передати посадову папку\n6. Забути про план на 2 місяці\n7. Не отримати відповідь на запитання про сумніви\n8. Не обговорити вступ на посаду\n9. Не дати підтвердження чому він впорається\n10. Не отримати підтвердження готовності" },
             { id: 29, type: 'study', title: "ІНСТРУКЦІЯ: Підготовча сесія для передачі функцій", desc: "Як організувати та провести сесію підготовки до передачі функцій. Тривалість ~8 годин. Відкрийте для повної інструкції.", expandable: true, templateContent: `<div class="instruction-content">
 
+<div class="article-download">
+    <a href="#" onclick="downloadSessionInstructionPDF(); return false;" class="download-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        Зберегти інструкцію (PDF / Google Docs)
+    </a>
+</div>
+
 <div class="instruction-situation">
     <div class="situation-header">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
@@ -5916,14 +5968,43 @@
     </div>
     
     <div class="materials-box">
-        <strong>Кожен учасник повинен мати:</strong>
-        <ul>
-            <li>ЯК ПЕРЕДАТИ ФУНКЦІЮ — для кожного учасника</li>
-            <li>ПРОГРАМА ПЕРЕДАЧІ ФУНКЦІЙ — по екземпляру на кожну функцію</li>
-            <li>Бланк опису функції — на кожну функцію</li>
-            <li>БЛАНК КОНТРАГЕНТА — по кілька на кожного учасника</li>
-            <li>Стаття «Інструкція аналіз функцій 4 продукта приклад газонокосилки»</li>
-        </ul>
+        <strong>Кожен учасник повинен мати <span style="color: #6b7280; font-weight: normal;">(збережіть і перекладіть на мову якою спілкуєтесь)</span>:</strong>
+        <div class="materials-list">
+            <div class="material-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <div>
+                    <a href="https://docs.google.com/document/d/1sW729Atft0NO54XtrYNzD-Q-_T-ZwCA4XhCl57Ed1Y4/edit?usp=sharing" target="_blank" class="material-link">ЯК ПЕРЕДАТИ ФУНКЦІЮ</a>
+                    <span class="material-note">— для кожного учасника</span>
+                </div>
+            </div>
+            <div class="material-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <div>
+                    <a href="https://docs.google.com/document/d/1BeFWUoviLevOHUePrDtu0CozdxtqcbYp/edit?usp=sharing" target="_blank" class="material-link">ПРОГРАМА ПЕРЕДАЧІ ФУНКЦІЙ</a>
+                    <span class="material-note">— по екземпляру на кожну функцію</span>
+                </div>
+            </div>
+            <div class="material-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                <div>
+                    <strong style="color: #166534;">Бланк опису функції</strong>
+                    <span class="material-note">— використовуйте <a href="#" onclick="openLesson(6); return false;" style="color: #22c55e;">AI-асистента з уроку 1.6</a>. Просто запустіть його та вкажіть для якої функції потрібен опис.</span>
+                </div>
+            </div>
+            <div class="material-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <div>
+                    <a href="https://docs.google.com/document/d/18G-X2M9eqP9B1SzZokISwPGIcPfF5BDq/edit?usp=sharing" target="_blank" class="material-link">БЛАНК КОНТРАГЕНТА</a>
+                    <span class="material-note">— по кілька на кожного учасника</span>
+                </div>
+            </div>
+            <div class="material-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <div>
+                    <span class="material-note">Стаття «Інструкція аналіз функцій 4 продукта приклад газонокосилки»</span>
+                </div>
+            </div>
+        </div>
     </div>
     
     <div class="checklist-items" style="margin-top: 12px;">
@@ -6500,6 +6581,167 @@
                         3. <strong>Усувайте обходи</strong> — контроль або навчання<br>
                         4. <strong>Реалістичність</strong> — не перевантажуйте план, час із запасом<br>
                         5. <strong>Вчіться</strong> — питайте поради, не грайте розумного
+                    </div>
+                </body>
+                </html>
+            `);
+            printWindow.document.close();
+            setTimeout(() => {
+                printWindow.print();
+            }, 250);
+        }
+
+        // Download Session Instruction as PDF
+        window.downloadSessionInstructionPDF = function() {
+            const printWindow = window.open('', '_blank');
+            printWindow.document.write(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <meta charset="UTF-8">
+                    <title>ІНСТРУКЦІЯ: Підготовча сесія для передачі функцій</title>
+                    <style>
+                        body { font-family: 'Inter', Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; line-height: 1.6; color: #1a1a1a; }
+                        h1 { font-size: 22px; margin-bottom: 20px; color: #166534; text-align: center; }
+                        h2 { font-size: 16px; margin: 24px 0 12px; color: #1a1a1a; border-bottom: 2px solid #22c55e; padding-bottom: 6px; }
+                        h3 { font-size: 14px; margin: 16px 0 8px; color: #3b82f6; }
+                        p { margin: 0 0 10px; font-size: 13px; }
+                        ul, ol { margin: 10px 0; padding-left: 24px; font-size: 13px; }
+                        li { margin-bottom: 6px; }
+                        .situation { background: #fef2f2; border-left: 4px solid #dc2626; padding: 12px 16px; margin: 16px 0; }
+                        .definition { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 16px 0; }
+                        .products { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 12px 16px; margin: 16px 0; }
+                        .note { background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 16px 0; font-size: 12px; }
+                        .conclusion { background: #f0fdf4; border: 1px solid #bbf7d0; padding: 16px; margin: 24px 0; border-radius: 8px; }
+                        table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 12px; }
+                        th, td { border: 1px solid #e5e7eb; padding: 8px; text-align: left; }
+                        th { background: #f9fafb; }
+                        .step { display: flex; margin-bottom: 8px; }
+                        .step-num { width: 24px; height: 24px; background: #22c55e; color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: bold; margin-right: 10px; flex-shrink: 0; }
+                        @media print { body { padding: 0; } }
+                    </style>
+                </head>
+                <body>
+                    <h1>ІНСТРУКЦІЯ<br>Підготовча сесія для передачі функцій</h1>
+                    
+                    <div class="situation">
+                        <strong>СИТУАЦІЯ</strong><br>
+                        Найпоширеніша помилка при передачі функцій — співробітник не приділяє достатньо часу та уваги опису та передачі. Тому передає функції усно, і потім довгий час співробітник, що прийняв функції, відволікає його своїми питаннями або просто робить помилки. При цьому технологія виконання цих функцій часто-густо просто втрачається.
+                    </div>
+                    
+                    <div class="definition">
+                        <strong>ЩО ТАКЕ ПІДГОТОВЧА СЕСІЯ</strong><br>
+                        Сесія — це заняття, організоване для співробітників, щоб підготувати їх до передачі функцій. Відмінність від семінару: це не лекція — кожен працює самостійно та розробляє документи. Цим процесом керує власник.<br><br>
+                        <em>Головне завдання власника — стежити, щоб процес не зупинявся та мети було досягнуто.</em>
+                    </div>
+                    
+                    <h2>МЕТА СЕСІЇ</h2>
+                    <p>Підготувати функції до передачі, щоб співробітник міг їх прийняти та швидко почати виконувати.</p>
+                    
+                    <div class="products">
+                        <strong>ПРОДУКТИ СЕСІЇ:</strong>
+                        <ol>
+                            <li>Описані функції, які готові до передачі</li>
+                            <li>Підготовлені інструменти, необхідні для виконання функцій</li>
+                            <li>Папка посади з набором матеріалів</li>
+                        </ol>
+                    </div>
+                    
+                    <h2>УЧАСНИКИ ТА ЇХНІ РОЛІ</h2>
+                    <table>
+                        <tr><th>Роль</th><th>Опис</th></tr>
+                        <tr><td><strong>Власник</strong></td><td>Керує роботою працівників на сесії</td></tr>
+                        <tr><td><strong>Майбутні керівники відділень</strong></td><td>Яким необхідно делегувати частину своїх функцій — готуються до передачі</td></tr>
+                        <tr><td><strong>Інші співробітники</strong></td><td>Яким потрібно делегувати функції для усунення неоптимальностей оргсхеми</td></tr>
+                    </table>
+                    
+                    <div class="note">
+                        <strong>Примітка:</strong> Якщо керівники вже передали всі необхідні функції, під час сесії можна: організувати опис функцій начальників відділів; описати функції для найму; описати функції, де виникає безліч помилок та збоїв.
+                    </div>
+                    
+                    <h2>РОЗКЛАД СЕСІЇ (~8 годин)</h2>
+                    <p><em>Рекомендуємо проводити у суботу</em></p>
+                    <table>
+                        <tr><th>Час</th><th>Блок</th></tr>
+                        <tr><td>ДО ОБІДУ</td><td></td></tr>
+                        <tr><td>1 год 40 хв</td><td>Заняття</td></tr>
+                        <tr><td>ПІСЛЯ ОБІДУ</td><td></td></tr>
+                        <tr><td>1 год 30 хв</td><td>Заняття</td></tr>
+                        <tr><td>20 хв</td><td>Перерва</td></tr>
+                        <tr><td>1 год 40 хв</td><td>Заняття</td></tr>
+                        <tr><td>20 хв</td><td>Перерва</td></tr>
+                        <tr><td>1 год 40 хв</td><td>Заняття</td></tr>
+                        <tr><td>20 хв</td><td>Перерва</td></tr>
+                        <tr><td>1 год 30 хв</td><td>Заняття</td></tr>
+                    </table>
+                    
+                    <h2>ПІДГОТОВКА ДО СЕСІЇ</h2>
+                    <ul>
+                        <li>☐ Складіть та роздрукуйте розклад сесії</li>
+                        <li>☐ Підготуйте диктофон: звільніть місце, нова батарейка (записати ~3,5 години)</li>
+                        <li>☐ Підготуйте загальний план передачі функцій</li>
+                        <li>☐ Підготуйте бланк контролю прогресу виконання програм</li>
+                        <li>☐ Визначте формат опису функцій (електронний або паперовий)</li>
+                        <li>☐ Організуйте приміщення з можливістю писати та принтером поблизу</li>
+                        <li>☐ Організуйте чай/каву та перекуси на перервах</li>
+                    </ul>
+                    
+                    <h3>Кожен учасник повинен мати (збережіть і перекладіть):</h3>
+                    <ul>
+                        <li><a href="https://docs.google.com/document/d/1sW729Atft0NO54XtrYNzD-Q-_T-ZwCA4XhCl57Ed1Y4/edit">ЯК ПЕРЕДАТИ ФУНКЦІЮ</a> — для кожного учасника</li>
+                        <li><a href="https://docs.google.com/document/d/1BeFWUoviLevOHUePrDtu0CozdxtqcbYp/edit">ПРОГРАМА ПЕРЕДАЧІ ФУНКЦІЙ</a> — по екземпляру на кожну функцію</li>
+                        <li>Бланк опису функції — використовуйте AI-асистента з уроку 1.6</li>
+                        <li><a href="https://docs.google.com/document/d/18G-X2M9eqP9B1SzZokISwPGIcPfF5BDq/edit">БЛАНК КОНТРАГЕНТА</a> — по кілька на кожного</li>
+                        <li>Стаття «Інструкція аналіз функцій 4 продукта»</li>
+                    </ul>
+                    
+                    <h2>РОЛЬ ВЛАСНИКА</h2>
+                    <ul>
+                        <li><strong>Керує</strong>, щоб робота виконувалася швидко, учасники не відхилялися від мети</li>
+                        <li><strong>Інструктор:</strong> вітає, ставить завдання, оголошує розклад, стежить за часом</li>
+                        <li><strong>Перевіряє</strong> та оцінює виконані завдання, коригує, відповідає на запитання</li>
+                        <li><strong>Забезпечує позитивну атмосферу</strong> — негативні емоції зменшують ефективність</li>
+                    </ul>
+                    
+                    <h2>ПЛАН СЕСІЇ</h2>
+                    <div class="step"><span class="step-num">1</span> Привітати учасників</div>
+                    <div class="step"><span class="step-num">2</span> Оголосити мету та результат сесії</div>
+                    <div class="step"><span class="step-num">3</span> Оголосити розклад сесії</div>
+                    <div class="step"><span class="step-num">4</span> <strong>Розповісти правила сесії:</strong></div>
+                    <ul style="margin-left: 34px;">
+                        <li>Рухатиметесь за програмою дій, ставте підпис при виконанні</li>
+                        <li>На цій сесії виконуєте тільки першу частину програми</li>
+                        <li>Я перевірятиму виконання деяких завдань</li>
+                        <li>Хто працює на комп'ютері — надсилайте на друк</li>
+                        <li>Завершили всі завдання першої частини — можете йти додому</li>
+                        <li>Питання чи складності — піднімайте руку</li>
+                        <li><strong>Вимкніть телефони прямо зараз</strong></li>
+                        <li>Не відволікайтеся на інші питання</li>
+                    </ul>
+                    <div class="step"><span class="step-num">5</span> Якщо не проходили курс — розкажіть про бланк опису функції та технологію «4 продукта»</div>
+                    <div class="step"><span class="step-num">6</span> Зробіть огляд бланка ПРОГРАМА ПЕРЕДАЧІ ФУНКЦІЙ — на сесії тільки Частина 1</div>
+                    <div class="step"><span class="step-num">7</span> Поставити кожному учаснику ціль на день</div>
+                    <div class="step"><span class="step-num">8</span> Перевіряйте виконані завдання та відзначайте у бланку контролю</div>
+                    <div class="step"><span class="step-num">9</span> Слідкуйте за часом та дотриманням розкладу</div>
+                    <div class="step"><span class="step-num">10</span> Наприкінці подякуйте всім, відзначте хороші результати</div>
+                    
+                    <h2>РЕКОМЕНДАЦІЇ З ПРОВЕДЕННЯ</h2>
+                    <ol>
+                        <li><strong>Виявляйте позитивні емоції</strong> та впевненість у результаті</li>
+                        <li>Щоб відповісти на запитання — <strong>підійдіть та говоріть тихо</strong>, щоб не відволікати інших</li>
+                        <li><strong>Підтверджуйте хороші моменти</strong> в описі функцій<br><em>«Ти дуже добре вигадав цей бланк, це дійсно спростить передачу даних»</em></li>
+                        <li>При корекції <strong>давайте підтвердження</strong><br><em>«Ти професіонал у цьому, дай відповідь ще ось на такі питання, додай кілька прикладів»</em></li>
+                        <li><strong>Підбадьорюйте високу швидкість</strong><br><em>«Добре рухаєтеся, так тримати»</em></li>
+                    </ol>
+                    
+                    <div class="note">
+                        <strong>Примітка:</strong> Якщо власникові також необхідно виконувати програми передачі функцій, він може виконувати кроки під час сесії, але перш за все повинен виконувати роль консультанта і контролювати роботу інших.
+                    </div>
+                    
+                    <div class="conclusion">
+                        <strong>ВИСНОВОК</strong><br>
+                        Малоймовірно, що співробітник самостійно зможе зробити підготовчі дії краще та швидше, ніж це відбудеться на цій сесії. Ця сесія заощадить багато часу власника та майбутніх керівників відділень та уможливить якісну та ефективну передачу функцій.<br><br>
+                        <strong>А головне — збереже технологію у компанії.</strong>
                     </div>
                 </body>
                 </html>

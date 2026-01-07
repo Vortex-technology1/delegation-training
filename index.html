@@ -3981,6 +3981,99 @@
                 display: inline-block;
                 margin-top: 8px;
             }
+
+            .ai-warning {
+                flex-direction: column;
+                text-align: left;
+            }
+
+            .ai-warning svg {
+                margin: 0 0 8px 0;
+            }
+
+            .course-meta h1 {
+                font-size: 18px;
+            }
+
+            .course-meta p {
+                font-size: 13px;
+            }
+
+            .material-desc {
+                font-size: 12px;
+                line-height: 1.5;
+            }
+
+            .material-checkbox {
+                width: 24px;
+                height: 24px;
+            }
+
+            .instruction-content {
+                padding: 12px;
+            }
+
+            .instruction-section {
+                margin-top: 16px;
+            }
+
+            .section-header {
+                padding: 12px;
+            }
+
+            .section-header h4 {
+                font-size: 13px;
+            }
+
+            .recommendation-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .rec-number {
+                margin-bottom: 4px;
+            }
+
+            .checklist-item {
+                padding: 10px;
+            }
+
+            .checklist-item p {
+                font-size: 12px;
+            }
+
+            /* Мобільні стилі для статті помилок */
+            .instruction-section > div[style*="grid-template-columns: 1fr 1fr"] {
+                display: flex !important;
+                flex-direction: column !important;
+            }
+
+            .visual-explanation {
+                padding: 12px;
+            }
+
+            .org-box {
+                padding: 8px;
+                font-size: 11px;
+            }
+
+            .ai-intro-card {
+                padding: 16px;
+            }
+
+            .ai-intro-text h2 {
+                font-size: 16px;
+            }
+
+            .ai-intro-text p {
+                font-size: 13px;
+            }
+
+            .ai-btn {
+                padding: 12px 20px;
+                font-size: 13px;
+            }
         }
     </style>
 </head>
@@ -4190,6 +4283,14 @@
                     </svg>
                     <p><strong>Підтримка:</strong> Якщо щось незрозуміло або потрібна допомога — напишіть в Telegram-бот підтримки. <a href="https://t.me/AlexEduPro_bot?start=68f4ac956d0d3141970a83e8" target="_blank" style="color: #166534; font-weight: 600; text-decoration: underline;">Написати в підтримку</a></p>
                 </div>
+                <div class="ai-warning" style="background: #fef3c7; border: 1px solid #fcd34d; border-radius: 12px; padding: 14px 16px; margin-top: 12px; display: flex; align-items: flex-start; gap: 12px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                        <line x1="12" x2="12" y1="9" y2="13"/>
+                        <line x1="12" x2="12.01" y1="17" y2="17"/>
+                    </svg>
+                    <p style="margin: 0; font-size: 13px; color: #92400e; line-height: 1.5;"><strong>Важливо:</strong> Іноді при відкритті AI-асистента може не показуватися кнопка "Старт" — це помилка на стороні OpenAI. Просто напишіть <strong>"Старт"</strong> в чат або закрийте вкладку і відкрийте асистента знову.</p>
+                </div>
             </div>
 
             <!-- Course Meta -->
@@ -4298,7 +4399,7 @@
         // Materials data (42 items - updated structure)
         const materials = [
             // БАНЕР: Етап підготовки
-            { id: 0, type: 'info', title: "КАРТА КУРСУ", desc: "ПІДГОТОВКА (уроки 1-29) → СЕСІЯ ПЕРЕДАЧІ для керівників (30-31) → ЗАГАЛЬНІ ЗБОРИ для всіх (32-36) → ПІДТРИМКА ОРГСХЕМИ (37-38)", isPreparation: true },
+            { id: 0, type: 'info', title: "КАРТА КУРСУ", desc: "ПІДГОТОВКА (уроки 1-30) → СЕСІЯ ПЕРЕДАЧІ для керівників (31-32) → ЗАГАЛЬНІ ЗБОРИ для всіх (33-37) → ПІДТРИМКА ОРГСХЕМИ (38-39)", isPreparation: true },
             
             // УРОК 1: Функції власника vs директора
             { id: 1, type: 'study', title: "Функції власника vs директора: що можна делегувати", desc: "ФУНДАМЕНТ КУРСУ! Перш ніж делегувати — зрозумійте, які функції НІКОЛИ не можна передавати. Відкрийте для повної статті.", expandable: true, templateContent: `<div class="instruction-content">
@@ -4502,7 +4603,7 @@
             { id: 2, type: 'ai', title: "КРОК 1: Підготовка матеріалів з AI-асистентом", desc: "AI-асистент проведе вас через підготовку тезисів, презентації, перевірки та опитування. Це матеріали для загальної презентації оргсхеми команді, яку проведете В КІНЦІ курсу.\n\nПройдіть діалог з асистентом — він пояснить структуру курсу та допоможе підготувати всі необхідні матеріали.", url: "https://chatgpt.com/g/g-6951729e72c881919e55005539b9277a-delegation-module-assistant-1" },
             
             // СТАТТЯ: 7 помилок у делегуванні
-            { id: 3, type: 'study', title: "7 ПОМИЛОК У ДЕЛЕГУВАННІ", desc: "Прочитайте уважно! Після цієї статті вам потрібно буде написати свої помилки. Відкрийте для повного тексту.", expandable: true, templateContent: \`<div class="instruction-content">
+            { id: 3, type: 'study', title: "7 ПОМИЛОК У ДЕЛЕГУВАННІ", desc: "Прочитайте уважно! Після цієї статті вам потрібно буде написати свої помилки. Відкрийте для повного тексту.", expandable: true, templateContent: `<div class="instruction-content">
 
 <div class="instruction-situation">
     <div class="situation-header">
@@ -4938,14 +5039,14 @@
     </div>
 </div>
 
-</div>\` },
+</div>` },
             
             // КРОК 2: Технологія передачі функцій
             { id: 4, type: 'task', title: "МОЇ ПОМИЛКИ У ДЕЛЕГУВАННІ", desc: "Напишіть 5 помилок у делегуванні, які ви припускалися з перелічених в статті. Опишіть конкретні ситуації:\n\n1.\n2.\n3.\n4.\n5." },
             { id: 5, type: 'ai', title: "Регламент щодо використання оргсхеми", desc: "AI-асистент допоможе вам:\n• Вивчити практичне завдання з регламенту\n• Доопрацювати шаблон регламенту під вашу компанію\n• Уникнути поширених помилок\n\nРЕЗУЛЬТАТ: Готовий регламент у Google Docs, адаптований під вашу компанію. Збережіть його — він знадобиться для загальних зборів!", url: "https://chatgpt.com/g/g-695178a73c5881918fdccafddb601baa-delegation-module-assistant-2" },
             { id: 6, type: 'ai', title: "Технологія передачі функцій", desc: "AI-асистент розбере з вами:\n• Що таке прояснення продукту та функцій посади\n• Інструкцію з прояснення продукту та функцій\n• Послідовність дій під час делегування\n\nПісля діалогу напишіть інсайти та функції, які ви як власник маєте передати.", url: "https://chatgpt.com/g/g-6951848f8ca081918f1cad8fcaeb7707-delegation-module-assistant-2" },
             { id: 7, type: 'task', title: "МОЇ ІНСАЙТИ ТА ФУНКЦІЇ ДЛЯ ПЕРЕДАЧІ", desc: "Після роботи з AI-асистентом напишіть:\n\n1. Головні інсайти з технології передачі функцій:\n\n2. Функції, які я передаю керівникам відділень:\n\nКерівник відділення 1:\nКерівник відділення 2:\nКерівник відділення 3:\nКерівник відділення 4:\nКерівник відділення 5:\nКерівник відділення 6:" },
-            { id: 8, type: 'study', title: "Що таке функція, обов'язки та операції?", desc: "Перш ніж описувати функцію, потрібно зрозуміти структуру управління. Клікніть, щоб побачити візуальну схему.", expandable: true, templateContent: \`<div class="visual-explanation">
+            { id: 8, type: 'study', title: "Що таке функція, обов'язки та операції?", desc: "Перш ніж описувати функцію, потрібно зрозуміти структуру управління. Клікніть, щоб побачити візуальну схему.", expandable: true, templateContent: `<div class="visual-explanation">
 
 <div class="section-title">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
